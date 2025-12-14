@@ -1,0 +1,169 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+padding: 10px;
+
+}
+.to-doapp{
+  width: 60%;
+  max-height: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.to-doapp h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  
+}
+.to-doapp h2 img{
+  width: 70px;
+  margin-left: 10px;
+}
+.row{
+   display: flex;
+   align-items:center;
+   justify-content: space-between;
+   background: #edeef0;
+   border-radius: 30px;
+   margin-bottom: 25px;
+   padding-left: 20px;
+
+
+}
+input{
+  flex:1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+button{
+ 
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #75f03c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+
+
+}
+ul li{
+  font-size:17px;
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before{
+  content: "";
+  position: absolute;
+  height: 28px;
+  width:28px;
+  border-radius:50% ;
+  background-image: url("../images/uncheack.jpg");
+  background-position: center;
+  background-size: cover;
+  top:12px;
+  left:8px;
+
+
+}
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+   background-image: url("../images/image.png");
+
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color:#141313;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: #edeef0;
+
+}
+/* Animated line-through effect */
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  height: 2px;
+  background: #555;
+  width: 0;
+  transition: width 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+ul li.checked::after {
+  width: calc(100% - 100px);
+}
+
+
+@keyframes taskComplete {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+ul li.checked {
+  color: #555;
+  animation: taskComplete 0.5s ease;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  
+
+  background: linear-gradient(90deg, rgba(42,123,155,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+  background-size: 300% 300%; 
+  animation: gradientShift 10s ease infinite; 
+  padding: 10px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
